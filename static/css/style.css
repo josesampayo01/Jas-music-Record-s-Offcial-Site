@@ -41,7 +41,7 @@ p {
 .social-links a:hover {
     color: #ff5722;
 }
-.biografia, .contacto, .generos, .videos {
+.biografia, .contacto, .generos, .videos, .spotify {
     margin-top: 40px;
     text-align: left;
 }
