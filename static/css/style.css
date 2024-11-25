@@ -1,8 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
 
+/* Estilo del cuerpo con efecto parallax */
 body {
     font-family: 'Montserrat', sans-serif;
     background: url("https://josesampayo01.github.io/Jas-music-Record-s-Offcial-Site/static/images/background.jpg") no-repeat center center fixed;
+    background-attachment: fixed;
     background-size: cover;
     color: #ffffff;
     margin: 0;
@@ -12,62 +14,93 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+/* Estilos para el contenedor principal */
 .container {
     text-align: center;
     max-width: 900px;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar la legibilidad */
 }
+
+/* Tipografía elegante para encabezados */
+h1, h2 {
+    font-family: 'Amatic SC', cursive;
+}
+
+/* Estilo de encabezado */
 h1 {
     font-size: 3em;
     color: #ff5722;
 }
+
+/* Estilo de subencabezados */
 h2 {
     color: #ff5722;
 }
+
+/* Estilo de párrafos */
 p {
     line-height: 1.6;
     font-size: 1.2em;
 }
-.social-links {
-    margin-top: 20px;
-}
+
+/* Animación sutil para enlaces de redes sociales */
 .social-links a {
     color: #ffffff;
     text-decoration: none;
     margin: 0 10px;
     font-size: 2em;
+    transition: transform 0.3s, color 0.3s;
 }
+
 .social-links a:hover {
     color: #ff5722;
+    transform: scale(1.1);
+    text-shadow: 0 0 5px #ff5722;
 }
+
+/* Fondo para secciones */
 .biografia, .contacto, .generos, .videos, .spotify {
     margin-top: 40px;
+    padding: 20px;
     text-align: left;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
 }
+
+/* Estilos de iframe */
 iframe {
     width: 100%;
     height: 315px;
     margin: 20px 0;
 }
+
+/* Estilo del logo */
 .logo {
     max-width: 150px;
     margin-top: 20px;
 }
+
+/* Transiciones suaves para formularios */
 .contacto form {
     display: flex;
     flex-direction: column;
 }
+
 .contacto label {
     margin-bottom: 5px;
     color: #ff5722;
 }
+
 .contacto input, .contacto textarea {
     margin-bottom: 10px;
     padding: 10px;
     border: none;
     border-radius: 5px;
+    transition: background-color 0.3s, border 0.3s, box-shadow 0.3s;
 }
+
 .contacto button {
     background-color: #ff5722;
     color: #ffffff;
@@ -76,7 +109,15 @@ iframe {
     border-radius: 5px;
     cursor: pointer;
     font-size: 1em;
+    transition: background-color 0.3s, border 0.3s, box-shadow 0.3s;
 }
+
 .contacto button:hover {
     background-color: #e64a19;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.contacto input:focus, .contacto textarea:focus {
+    border: 2px solid #ff5722;
+    outline: none;
 }
