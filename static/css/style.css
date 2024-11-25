@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    <img src="static/images/mi_logo.jpg" alt="Logo" class="logo">;
+    background: url("static/images/background.jpg") no-repeat center center fixed;
     background-size: cover;
     color: #ffffff;
     margin: 0;
