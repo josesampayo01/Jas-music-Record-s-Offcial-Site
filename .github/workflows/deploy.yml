@@ -3,7 +3,7 @@ name: Deploy JAS Music Records Official
 on:
   push:
     branches:
-      - acciones  # Asegúrate de cambiar "main" a "acciones" para que el flujo de trabajo se ejecute en esta rama
+      - acciones  # Cambia "acciones" si estás usando otra rama para tus despliegues
 
 jobs:
   build-deploy:
@@ -28,11 +28,12 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: github-pages
-        path: ./public  # Asegúrate de que esta ruta apunte al directorio correcto donde se encuentran tus archivos construidos
+        path: ./mywebsite  # Asegúrate de que esta ruta apunte al directorio correcto donde se encuentran tus archivos construidos
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./public
+        publish_dir: ./mywebsite  # Asegúrate de que esta ruta también apunte al mismo directorio
+
 
