@@ -16,7 +16,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '14'
+        node-version: '14'  # Asegúrate de que la versión de Node.js es la correcta para tu proyecto
 
     - name: Install dependencies
       run: npm install
@@ -28,10 +28,10 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: github-pages
-        path: .  # Apunta a la raíz del repositorio donde están todos tus archivos
+        path: ./  # Asegúrate de que esta ruta apunte al directorio correcto donde se encuentran tus archivos construidos
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: .  # Asegúrate de que esta ruta también apunte a la raíz
+        publish_dir: ./  # Asegúrate de que esta ruta también apunte al mismo directorio
