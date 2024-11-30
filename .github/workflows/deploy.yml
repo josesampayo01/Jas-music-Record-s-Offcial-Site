@@ -28,7 +28,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: github-pages
-        path: .  # Apunta a la raíz del repositorio donde están todos tus archivos
+        path: .  # Asegúrate de que esta ruta apunte a la raíz del repositorio
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
