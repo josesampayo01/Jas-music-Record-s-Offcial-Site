@@ -74,6 +74,7 @@ p {
     text-align: left;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Estilos de iframe */
@@ -83,10 +84,37 @@ iframe {
     margin: 20px 0;
 }
 
-/* Estilo del logo */
+/* Efecto en el logo */
 .logo {
     max-width: 150px;
     margin-top: 20px;
+    transition: transform 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+/* Efecto de desplazamiento (scroll) */
+.scroll-effect {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.scroll-effect.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Estilo para imágenes */
+img {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Estilos para formularios */
