@@ -3,7 +3,7 @@ name: Deploy JAS Music Records Official
 on:
   push:
     branches:
-      - acciones  # Asegúrate de que la rama correcta está especificada aquí
+      - acciones
 
 jobs:
   build-deploy:
@@ -16,7 +16,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '14'  # Asegúrate de que la versión de Node.js es la correcta para tu proyecto
+        node-version: '14'
 
     - name: Install dependencies
       run: npm install
@@ -25,13 +25,14 @@ jobs:
       run: npm run build
 
     - name: Upload artifact
-      uses: actions/upload-artifact@v4  # Utiliza la versión 4 de la acción de artefactos
+      uses: actions/upload-artifact@v4
       with:
         name: github-pages
-        path: ./  # Asegúrate de que esta ruta apunte a la raíz del repositorio
+        path: ./
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./  # Asegúrate de que esta ruta también apunte a la raíz
+        publish_dir: ./
+
