@@ -60,6 +60,13 @@ p {
     text-shadow: 0 0 5px #ff5722;
 }
 
+/* Estilo para las imágenes de los logos */
+.social-links img {
+    width: 40px; /* Asegura que todas las imágenes de logos tengan el mismo tamaño */
+    height: 40px; /* Asegura que todas las imágenes de logos tengan el mismo tamaño */
+    vertical-align: middle;
+}
+
 /* Fondo para secciones */
 .biografia, .contacto, .generos, .videos, .spotify, .chat-en-vivo {
     margin-top: 40px;
@@ -129,8 +136,8 @@ iframe {
     }
 
     .social-links img {
-        width: 30px;
-        height: 30px;
+        width: 30px; /* Ajuste de tamaño para pantallas más pequeñas */
+        height: 30px; /* Ajuste de tamaño para pantallas más pequeñas */
     }
 
     .logo {
