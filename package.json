@@ -1,13 +1,19 @@
 {
   "name": "Jas-music-Record-s-Offcial-Site",
   "version": "1.0.0",
+  "description": "Página oficial de JAS Music Records",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "echo \"Building project...\" && exit 0"
+    "build": "echo \"Building project...\" && exit 0",
+    "start": "node server.js"
   },
-  "keywords": [],
   "author": "José Antonio Sampayo Martínez",
   "license": "ISC",
-  "description": ""
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
 }
