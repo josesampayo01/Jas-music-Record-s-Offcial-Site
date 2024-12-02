@@ -1,37 +1,43 @@
-name: Deploy JAS Music Records Official
+name: Build and Deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - acciones  # Asegúrate de que la rama correcta está especificada aquí
+      - acciones  # Reemplaza con el nombre de tu rama principal
 
 jobs:
-  build-deploy:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '14'  # Asegúrate de que la versión de Node.js es la correcta para tu proyecto
+      - name: Install dependencies
+        run: npm install
 
-    - name: Install dependencies
-      run: npm install
+      - name: Build the project
+        run: npm run build
 
-    - name: Build website
-      run: npm run build
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: github-pages
+          path: Jas-music-Record-s-Official-Site  # Apunta a la raíz del directorio donde están tus archivos
 
-    - name: Upload artifact
-      uses: actions/upload-artifact@v3
-      with:
-        name: github-pages
-        path: ./  # Asegúrate de que esta ruta apunte al directorio correcto donde se encuentran tus archivos construidos
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./  # Asegúrate de que esta ruta también apunte al mismo directorio
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          artifact: github-pages
