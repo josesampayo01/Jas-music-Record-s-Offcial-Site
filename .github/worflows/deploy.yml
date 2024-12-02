@@ -1,4 +1,4 @@
-name: Build and Deploy to GitHub Pages
+}name: Build and Deploy to GitHub Pages
 
 on:
   push:
@@ -32,6 +32,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: build
+    permissions:
+      id-token: write  # Añade esta línea para asegurarte de que el GITHUB_TOKEN tiene los permisos correctos
+      contents: read
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
