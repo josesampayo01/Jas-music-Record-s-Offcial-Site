@@ -3,7 +3,7 @@ name: Build and Deploy to GitHub Pages
 on:
   push:
     branches:
-      - acciones  # Cambiado a tu rama principal
+      - acciones  # Reemplaza con el nombre de tu rama principal
 
 jobs:
   build:
@@ -16,7 +16,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '14'
-        
+
       - name: Install dependencies
         run: npm install
 
@@ -27,7 +27,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: github-pages
-          path: Jas-music-Record-s-Official-Site/.github/worflows/deploy.yml  # Ruta a los archivos de tu proyecto
+          path: Jas-music-Record-s-Official-Site  # Apunta a la raíz del directorio donde están tus archivos
 
   deploy:
     runs-on: ubuntu-latest
