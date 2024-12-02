@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background: url("../images/background.jpg") no-repeat center center fixed; /* Ruta relativa desde el archivo CSS */
+    background: url("https://raw.githubusercontent.com/josesampayo01/Jas-music-Record-s-Offcial-Site/main/static/images/background.jpg") no-repeat center center fixed;
     background-size: cover;
     color: #ffffff;
     margin: 0;
