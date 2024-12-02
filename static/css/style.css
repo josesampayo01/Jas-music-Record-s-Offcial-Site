@@ -35,7 +35,10 @@ p {
 }
 
 .social-links {
-    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px; /* Espacio entre los elementos */
 }
 
 .social-links a {
@@ -43,10 +46,18 @@ p {
     text-decoration: none;
     margin: 0 10px;
     font-size: 2em;
+    display: flex;
+    align-items: center;
 }
 
 .social-links a:hover {
     color: #ff5722;
+}
+
+.social-links img {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px; /* Espacio entre el icono y el texto */
 }
 
 .biografia, .contacto, .generos, .videos {
