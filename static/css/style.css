@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-
+/* Estilos generales para todos los dispositivos */
 body {
     font-family: 'Montserrat', sans-serif;
     background: url("https://raw.githubusercontent.com/josesampayo01/Jas-music-Record-s-Offcial-Site/main/static/images/background.jpg") no-repeat center center fixed;
@@ -105,4 +104,33 @@ iframe {
 
 .contacto button:hover {
     background-color: #e64a19;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .social-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .social-links img {
+        width: 30px;
+        height: 30px;
+        margin-right: 0;
+    }
+
+    .contact-form input, .contact-form textarea {
+        max-width: 90%;
+    }
+
+    iframe {
+        width: 100%;
+        height: 200px;
+    }
+
+    .video-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 }
