@@ -1,3 +1,4 @@
 User-agent: *
-Disallow:
+Disallow: /
+Allow: /index.html
 Sitemap: https://josesampayo01.github.io/Jas-music-Record-s-Offcial-Site/sitemap.xml
